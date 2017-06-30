@@ -137,7 +137,7 @@ public int calculateAccessoriesPrice() {
   return 0;
 }
 
-public int totalPrice() {
+public int totalCost() {
  int total = calculateFoodPrice() + calculateBeveragePrice() + calculateMusicBandPrice() + calculateAccessoriesPrice();
  return total;
  }

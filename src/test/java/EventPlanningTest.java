@@ -92,9 +92,9 @@ public class EventPlanningTest {
   }
 
   @Test
-  public void totalPrice() {
+  public void totalCost() {
     EventPlanning testEventPlanning = new EventPlanning(100,"simple", "hot drinks", "Rock", "Magic Shoes");
-    assertEquals(2500, testEventPlanning.totalPrice());
+    assertEquals(2500, testEventPlanning.totalCost());
   }
 
 
