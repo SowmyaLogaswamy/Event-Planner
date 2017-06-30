@@ -119,7 +119,28 @@ public int calculateBeveragePrice() {
   }
   return total;
 }
+public int calculateMusicBandPrice() {
+  if (mMusicBandsAvailable.equals("Rock")) {
+    return 100;
+  } else if (mMusicBandsAvailable.equals("Pop")) {
+    return 200;
+  }
+  return 0;
+}
 
+public int calculateAccessoriesPrice() {
+  if (mAccessoriesAvailable.equals("Magic Shoes")) {
+    return 100;
+  } else if (mAccessoriesAvailable.equals("Wand")) {
+    return 200;
+  }
+  return 0;
+}
+
+public int totalPrice() {
+ int total = calculateFoodPrice() + calculateBeveragePrice() + calculateMusicBandPrice() + calculateAccessoriesPrice();
+ return total;
+ }
 
 
 

@@ -73,18 +73,28 @@ public class EventPlanningTest {
             assertEquals(1000, testEventPlanning.calculateFoodPrice());
           }
 
-
-  @Test
-  public void EventPlanning_calculateBeveragePrice_2000() {
-    EventPlanning testEventPlanning = new EventPlanning(200,"simple", "soft drinks", "Rock", "Magic Shoes");
-    assertEquals(2000, testEventPlanning.calculateFoodPrice());
-  }
-
-
   @Test
   public void EventPlanning_calculateBeveragePrice_1200() {
     EventPlanning testEventPlanning = new EventPlanning(200,"simple", "hot drinks", "Rock", "Magic Shoes");
     assertEquals(800, testEventPlanning.calculateBeveragePrice());
+  }
+
+  @Test
+  public void EventPlanning_calculateMusicBandPrice_cost() {
+    EventPlanning testEventPlanning = new EventPlanning(50,"simple", "hot drinks", "Rock", "Magic Shoes");
+    assertEquals(100, testEventPlanning.calculateMusicBandPrice());
+  }
+
+  @Test
+  public void EventPlanning_calculateAccessoriesPrice_cost() {
+    EventPlanning testEventPlanning = new EventPlanning(100,"simple", "hot drinks", "Rock", "Magic Shoes");
+    assertEquals(100, testEventPlanning.calculateAccessoriesPrice());
+  }
+
+  @Test
+  public void totalPrice() {
+    EventPlanning testEventPlanning = new EventPlanning(100,"simple", "hot drinks", "Rock", "Magic Shoes");
+    assertEquals(2500, testEventPlanning.totalPrice());
   }
 
 
