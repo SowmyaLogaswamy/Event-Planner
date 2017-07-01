@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EventPlanningTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2017-06-30T23:15:53" hostname="epicodus-3.local" time="0.003">
+<testsuite name="EventPlanningTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2017-07-01T00:14:29" hostname="epicodus-3.local" time="0.003">
   <properties/>
   <testcase name="EventPlanning_calculateFoodPrice_10500" classname="EventPlanningTest" time="0.001"/>
   <testcase name="EventPlanning_calculateFoodPrice_15000" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_instantiatesCorrectly" classname="EventPlanningTest" time="0.0"/>
-  <testcase name="totalPrice" classname="EventPlanningTest" time="0.0"/>
+  <testcase name="totalCost" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_calculateBeveragePrice_1200" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_getMusicBandTypes_String" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_calculateFoodPrice_1000" classname="EventPlanningTest" time="0.0"/>
@@ -15,7 +15,7 @@
   <testcase name="EventPlanning_calculateMusicBandPrice_cost" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_calculateFoodPrice_10" classname="EventPlanningTest" time="0.0"/>
   <testcase name="EventPlanning_getEventSize_25" classname="EventPlanningTest" time="0.0"/>
-  <testcase name="EventPlanning_calculateAccessoriesPrice_cost" classname="EventPlanningTest" time="0.0"/>
+  <testcase name="EventPlanning_calculateAccessoriesPrice_cost" classname="EventPlanningTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
