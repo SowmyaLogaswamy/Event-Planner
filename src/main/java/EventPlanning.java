@@ -1,5 +1,4 @@
 public class EventPlanning {
-
   private int mEventSize;
   private String mFoodsAvailable;
   private String mBeveragesServed;
@@ -13,62 +12,57 @@ public EventPlanning(int guests, String foods, String beverages, String musicban
   mBeveragesServed = beverages;
   mMusicBandsAvailable = musicbands;
   mAccessoriesAvailable = accessories;
-
 }
+
 /////////// Create Custom methods for all properties
-public int getEventSize() {
-  return mEventSize;
- }
+  public int getEventSize() {
+    return mEventSize;
+  }
 
   public String getFoodTypes() {
     return mFoodsAvailable;
-   }
-
-
-public String getBeverageTypes() {
-  return mBeveragesServed;
   }
 
- public String getMusicBandTypes() {
- return mMusicBandsAvailable;
+  public String getBeverageTypes() {
+    return mBeveragesServed;
+  }
+
+  public String getMusicBandTypes() {
+    return mMusicBandsAvailable;
   }
 
   public String getAccessoriesAvailable() {
-  return mAccessoriesAvailable;
+    return mAccessoriesAvailable;
   }
 /////////////Create Method to Calculate Costs of Food and Beverages
   public int calculateFoodPrice() {
     int total = 0;
-    if (mFoodsAvailable.equals("grand")){
+    if (mFoodsAvailable.equals("grand")) {
       if (mEventSize <= 50) {
         total = mEventSize * 50;
         return total;
       } else if (mEventSize > 50 && mEventSize <= 100) {
         total = mEventSize * 45;
         return total;
-       }
-      else if (mEventSize > 100 && mEventSize <= 200) {
+      } else if (mEventSize > 100 && mEventSize <= 200) {
         total = mEventSize * 40;
-       return total;
+        return total;
       } else if (mEventSize > 200 && mEventSize <= 300) {
         total = mEventSize * 35;
         return total;
-      }
-       else if (mEventSize > 300 && mEventSize <= 500) {
-      total = mEventSize * 30;
-       return total;
-       }
-       else  {
+      } else if (mEventSize > 300 && mEventSize <= 500) {
+        total = mEventSize * 30;
+        return total;
+      } else  {
         total = mEventSize * 25;
-       }
+      }
       return total;
      }
     else if (mFoodsAvailable.equals("simple")) {
       if (mEventSize <= 50) {
       total = mEventSize * 20;
       return total;
-      }
-    else if (mEventSize > 50 && mEventSize <= 100) {
+      } else if (mEventSize > 50 && mEventSize <= 100) {
         total = mEventSize * 15;
         return total;
       } else if (mEventSize > 100 && mEventSize <= 200) {
@@ -80,68 +74,63 @@ public String getBeverageTypes() {
       } else if (mEventSize > 300 && mEventSize <= 500) {
         total = mEventSize * 7;
         return total;
-      }
-     else{
+      } else{
         total = mEventSize * 5;
-
       }
       return total;
-
-}
-return total;
-}
+    }
+    return total;
+  }
 /////////////Create Method to Calculate Costs of Beverages
-public int calculateBeveragePrice() {
-  int total = 0;
-  if (mBeveragesServed.equals("limebeer")){
-    if (mEventSize <= 50) {
-      total = mEventSize * 10;
-      return total;
-    } else if (mEventSize > 50 && mEventSize <= 100) {
-      total = mEventSize * 7;
-      return total;
-    } else {
-      total = mEventSize * 5;
-      return total;
+  public int calculateBeveragePrice() {
+    int total = 0;
+    if (mBeveragesServed.equals("limebeer")){
+      if (mEventSize <= 50) {
+        total = mEventSize * 10;
+        return total;
+      } else if (mEventSize > 50 && mEventSize <= 100) {
+        total = mEventSize * 7;
+        return total;
+      } else {
+        total = mEventSize * 5;
+        return total;
+      }
     }
-  }
-  else if (mBeveragesServed.equals("hot drinks")) {
-    if (mEventSize <= 50) {
-      total = mEventSize * 9;
-      return total;
-    } else if (mEventSize > 50 && mEventSize <= 100) {
-      total = mEventSize * 8;
-      return total;
-    } else  {
-      total = mEventSize * 4;
-      return total;
+    else if (mBeveragesServed.equals("hot drinks")) {
+      if (mEventSize <= 50) {
+        total = mEventSize * 9;
+        return total;
+      } else if (mEventSize > 50 && mEventSize <= 100) {
+        total = mEventSize * 8;
+        return total;
+      } else {
+        total = mEventSize * 4;
+        return total;
+      }
     }
+    return total;
   }
-  return total;
-}
-public int calculateMusicBandPrice() {
-  if (mMusicBandsAvailable.equals("Rock")) {
-    return 100;
-  } else if (mMusicBandsAvailable.equals("Pop")) {
-    return 200;
+
+  public int calculateMusicBandPrice() {
+    if (mMusicBandsAvailable.equals("Rock")) {
+      return 100;
+    } else if (mMusicBandsAvailable.equals("Pop")) {
+      return 200;
+    }
+    return 0;
   }
-  return 0;
-}
 
-public int calculateAccessoriesPrice() {
-  if (mAccessoriesAvailable.equals("Magic Shoes")) {
-    return 100;
-  } else if (mAccessoriesAvailable.equals("Wand")) {
-    return 200;
+  public int calculateAccessoriesPrice() {
+    if (mAccessoriesAvailable.equals("Magic Shoes")) {
+      return 100;
+    } else if (mAccessoriesAvailable.equals("Wand")) {
+      return 200;
+    }
+    return 0;
   }
-  return 0;
+
+  public int totalCost() {
+    int total = calculateFoodPrice() + calculateBeveragePrice() + calculateMusicBandPrice() + calculateAccessoriesPrice();
+    return total;
+  }
 }
-
-public int totalCost() {
- int total = calculateFoodPrice() + calculateBeveragePrice() + calculateMusicBandPrice() + calculateAccessoriesPrice();
- return total;
- }
-
-
-
- }
